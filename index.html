@@ -43,7 +43,8 @@
 
         .dropdown {
             position: relative;
-            display: inline-block;     
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .dropdown_cont {
@@ -95,7 +96,7 @@
 
         .home-page {
             margin-top: 30px;
-           float: right;
+            float: right;
 
         }
 
@@ -116,7 +117,6 @@
             transform: scale(1.2);
             /* 마우스 호버시 크기 확대 */
         }
-
     </style>
 
 </head>
@@ -135,6 +135,8 @@
         <h3 class="fw-normal"><span style="color:cornflowerblue">이름</span> 김민재</h3>
         <h3 class="fw-normal"><span style="color:cornflowerblue">MBTI</span> INFJ</h3>
         <h3 class="fw-normal"><span style="color:cornflowerblue">취미</span> 운동, 게임</h3>
+        
+        
         <div class="dropdown">
             <button class="drop_btn">BLOG</button>
             <div class="dropdown_cont">
@@ -147,34 +149,38 @@
                 <a href="#" class="dropdown_link">졸업하고 시골내려와서 공부하고 있습니다 운동은 자주하려고 하고 요세는 폰게임 젠레스 존 제로 합니다. 여러분들도 하세요</a>
             </div>
         </div>
+
+
         <h4><span style="color:cornflowerblue">💙내가 좋아하는 것들💙</span></h4>
-  <div class="gallery" id="gallery">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAn5HLsoTFt_jZVUVUlJmNtjd8tyLQd1bZQ&s" onclick="showNextImage()" />
-    <img src="https://images.pexels.com/photos/163403/box-sport-men-training-163403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="showNextImage()" />
-    <img src="https://cdn.gamemeca.com/data_center/287/380/20240704112525.jpg" onclick="showNextImage()" />
-  </div>
+        <div class="gallery" id="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAn5HLsoTFt_jZVUVUlJmNtjd8tyLQd1bZQ&s"
+                onclick="showNextImage()" />
+            <img src="https://images.pexels.com/photos/163403/box-sport-men-training-163403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                onclick="showNextImage()" />
+            <img src="https://cdn.gamemeca.com/data_center/287/380/20240704112525.jpg" onclick="showNextImage()" />
+        </div>
 
-  <div class="home-page">
-        <a href="https://seung-min-88.github.io/Home/" class="home-button">
-            <img src="https://img.icons8.com/?size=100&id=EkVS0vhJIaAl&format=png&color=000000" alt="홈 버튼" />
-        </a>
-    </div>
+        <div class="home-page">
+            <a href="https://seung-min-88.github.io/Home/" class="home-button">
+                <img src="https://img.icons8.com/?size=100&id=EkVS0vhJIaAl&format=png&color=000000" alt="홈 버튼" />
+            </a>
+        </div>
 
-  <script>
-    const images = document.querySelectorAll('.gallery img');
-    let currentIndex = 0;
+        <script>
+            const images = document.querySelectorAll('.gallery img');
+            let currentIndex = 0;
 
-    function showNextImage() {
-      images[currentIndex].style.display = 'none';
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].style.display = 'block';
-    }
+            function showNextImage() {
+                images[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.display = 'block';
+            }
 
-    // 처음에 첫 번째 이미지만 보이도록 설정
-    for (let i = 1; i < images.length; i++) {
-      images[i].style.display = 'none';
-    }
-  </script>
+            // 처음에 첫 번째 이미지만 보이도록 설정
+            for (let i = 1; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+        </script>
     </div><!-- /.col-lg-4 -->
 
     </div>
