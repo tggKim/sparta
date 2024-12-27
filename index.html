@@ -80,17 +80,6 @@
             transform: scale(1.1);
         }
 
-        .home-page {
-            margin-top: 30px;
-            float: right;
-
-        }
-
-        .home-button {
-            display: inline-block;
-            text-decoration: none;
-            margin-top: 20px;
-        }
 
         .home-button img {
             width: 50px;
@@ -103,15 +92,44 @@
             transform: scale(1.2);
             /* 마우스 호버시 크기 확대 */
         }
+
+        .header{
+            display: flex; 
+            align-items: center;
+        }
+
+        .header > h2{
+            flex:1; 
+            text-align: center; 
+            margin: 0;
+        }
     </style>
 
 </head>
 
 <body>
     <div class="row">
-        <div class="col-lg-4">
-            <h2><span style="color:cornflowerblue">ABOUT ME</span></h2>
+
+        <div class="header">
+
+            <div class="home-page" style="visibility: hidden;">
+                <a href="https://seung-min-88.github.io/Home/" class="home-button">
+                    <img src="https://img.icons8.com/?size=100&id=EkVS0vhJIaAl&format=png&color=000000" alt="홈 버튼" />
+                </a>
+            </div>
+
+            <h2>
+                <span style="color:cornflowerblue">ABOUT ME</span>
+            </h2>
+
+            <div class="home-page">
+                <a href="https://seung-min-88.github.io/Home/" class="home-button">
+                    <img src="https://img.icons8.com/?size=100&id=EkVS0vhJIaAl&format=png&color=000000" alt="홈 버튼" />
+                </a>
+            </div>
+
         </div>
+
         <div class="intro">
             <hr class="featurette-divider">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAn5HLsoTFt_jZVUVUlJmNtjd8tyLQd1bZQ&s"
@@ -144,12 +162,6 @@
             <img src="https://images.pexels.com/photos/163403/box-sport-men-training-163403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 onclick="showNextImage()" />
             <img src="https://cdn.gamemeca.com/data_center/287/380/20240704112525.jpg" onclick="showNextImage()" />
-        </div>
-
-        <div class="home-page">
-            <a href="https://seung-min-88.github.io/Home/" class="home-button">
-                <img src="https://img.icons8.com/?size=100&id=EkVS0vhJIaAl&format=png&color=000000" alt="홈 버튼" />
-            </a>
         </div>
 
         <script>
